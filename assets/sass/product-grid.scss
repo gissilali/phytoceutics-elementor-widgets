@@ -1,0 +1,104 @@
+.phyto-grid-container {
+  display: flex;
+  column-gap: 3rem;
+  .sidebar {
+    width: 25%;
+    flex-shrink: 0;
+  }
+  .phyto-product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    flex: 1 1 0%;
+
+    .phyto-grid-item {
+      width: 25%;
+      .title {
+        color: #252b42;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+      }
+      .price {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 25px;
+        color: #363636;
+      }
+      .thumbnail {
+        border-radius: 1.5rem;
+        overflow: hidden;
+        object-fit: cover;
+        position: relative;
+        display: block;
+        margin-bottom: 24px;
+        .thumbnail-overlay {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: rgba($color: #000000, $alpha: 0.2);
+          z-index: 10;
+          transition: background 0.3s ease;
+        }
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: auto;
+          scale: 1.2;
+          transition: scale 0.3s ease;
+        }
+
+        &:hover {
+          .thumbnail-overlay {
+            background: rgba($color: #000000, $alpha: 0);
+          }
+
+          img {
+            scale: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+form {
+  .form-control {
+    display: block;
+    width: 100%;
+    border: 1px solid rgb(203, 213, 225);
+    color: #333;
+    box-shadow: 0 1px 3px 0 rgba($color: #000000, $alpha: 0.2);
+    font-size: 0.75rem;
+    background-color: #fff;
+  }
+  .form-label {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .form-group {
+    margin-bottom: 3rem;
+  }
+}
+
+.phyto-btn {
+  font-weight: 700;
+  color: #151212;
+  background-color: #fff;
+  border-style: solid;
+  border-color: #000;
+  border-radius: 99px 99px 99px 99px;
+  margin: 20px 0px 0px 0px;
+  align-self: stretch;
+  width: 100%;
+  &:hover {
+    background-color: #151212;
+    color: #fff;
+  }
+  &:focus {
+    background-color: #151212;
+    color: #fff;
+  }
+}
+
+//    <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
