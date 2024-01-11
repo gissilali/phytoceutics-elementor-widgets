@@ -144,9 +144,9 @@ class Product_Grid extends Widget_Base
     {
         return wc_get_products([
             'posts_per_page' => 10,
-            'category' => json_encode(array_filter($categories, function ($category) {
+            'category' => array_filter($categories, function ($category) {
                 return strlen($category) > 0;
-            }))
+            })
         ]);
     }
 
